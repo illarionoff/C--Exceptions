@@ -12,9 +12,9 @@ namespace Exceptions
             {
                 output = ParentMethod(position);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                throw new ArgumentException("You passed wrong data", e);
+                throw new ArgumentException("You passed wrong data", ex);
                 throw; //Exception bubbling
             }
             finally

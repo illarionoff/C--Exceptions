@@ -12,11 +12,15 @@ namespace Exceptions
                 var result = demo.GrandParentMethod(5);
                 Console.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ArgumentException ex)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Your number is out of range");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
 
-                var inner = e.InnerException;
+                var inner = ex.InnerException;
                 while (inner != null)
                 {
                     Console.WriteLine(inner.StackTrace);
